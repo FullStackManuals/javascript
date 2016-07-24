@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>javascript 手册</title>
+    <link href="../assert/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../assert/css/github-markdown.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+        .markdown-body{
+            padding: 10px;
+        }
+        #content h1 em {
+            float: right;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+		 @include('./blocks/Global.html')
+         @include('./blocks/Array.html')
+		 @include('./blocks/Boolean.html')
+		 @include('./blocks/Date.html')
+		 @include('./blocks/Math.html')
+		 @include('./blocks/Number.html') 
+		 @include('./blocks/String.html') 
+		 @include('./blocks/RegExp.html') 
+		  
+    </div>
+    <div class="modal fade bs-example-modal-lg" id="detail">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content markdown-body" id="content">
+          ...
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../assert/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../assert/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assert/js/showdown.min.js"></script>
+    <script type="text/javascript" >
+        $(function(){
+            var converter = new showdown.Converter();
+            var res = location.href + '../assert/docs/';
+           $(document).on('click', 'a', function(e){
+                obj = $(this).parents('.panel').data('obj');
+                proto = $(this).text();
+                //全局方法不需要对象
+                if('undefined' == typeof obj){
+                    obj = '';
+                }else{
+                    obj += '.';
+                }
+                $.get(res + obj + proto + '.md', function(data){
+                    html  = converter.makeHtml(data);
+                    $('#content').html(html);
+                    $('#detail').modal('show');
+                })
+                e.preventDefault();
+           })
+
+        })
+         
+    </script>
+</body>
+</html>

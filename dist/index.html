@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>javascript 手册</title>
+    <link href="../assert/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../assert/css/github-markdown.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+        .markdown-body{
+            padding: 10px;
+        }
+        #content h1 em {
+            float: right;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+		 <div class="panel panel-default">
+    <div class="panel-heading">
+        Global
+    </div>
+    <div class="panel-body">
+        <h2>全局方法</h2>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:35%">函数</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">decodeURI()</a></td>
+                    <td>解码某个编码的 URI。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">decodeURIComponent()</a></td>
+                    <td>解码一个编码的 URI 组件。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">encodeURI()</a></td>
+                    <td>把字符串编码为 URI。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">encodeURIComponent()</a></td>
+                    <td>把字符串编码为 URI 组件。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">escape()</a></td>
+                    <td>对字符串进行编码。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">eval()</a></td>
+                    <td>计算 JavaScript 字符串，并把它作为脚本代码来执行。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">getClass()</a></td>
+                    <td>返回一个 JavaObject 的 JavaClass。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">isFinite()</a></td>
+                    <td>检查某个值是否为有穷大的数。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">isNaN()</a></td>
+                    <td>检查某个值是否是数字。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">Number()</a></td>
+                    <td>把对象的值转换为数字。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">parseFloat()</a></td>
+                    <td>解析一个字符串并返回一个浮点数。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">parseInt()</a></td>
+                    <td>解析一个字符串并返回一个整数。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">String()</a></td>
+                    <td>把对象的值转换为字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">unescape()</a></td>
+                    <td>对由 escape() 编码的字符串进行解码。</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>预定义常量</h2>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:35%">方法</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">Infinity</a></td>
+                    <td>代表正的无穷大的数值。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">java</a></td>
+                    <td>代表 java.* 包层级的一个 JavaPackage。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">NaN</a></td>
+                    <td>指示某个值是不是数字值。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">Packages</a></td>
+                    <td>根 JavaPackage 对象。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">undefined</a></td>
+                    <td>指示未定义的值。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+         <div class="panel panel-default" data-obj="Array">
+            <div class="panel-heading">
+                Array
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered" data-type="attribute">
+                    <tbody>
+                        <tr>
+                            <th style="width:25%">属性</th>
+                            <th>描述</th>
+                        </tr>
+                        <tr>
+                            <td><a>constructor</a></td>
+                            <td>返回对创建此对象的数组函数的引用。</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">length</a></td>
+                            <td>设置或返回数组中元素的数目。</td>
+                        </tr>
+                        <tr>
+                            <td>prototype</td>
+                            <td>使您有能力向对象添加属性和方法。</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered" data-type="method">
+                    <tbody>
+                        <tr>
+                            <th style="width:25%">方法</th>
+                            <th>描述</th>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">concat()</a></td>
+                            <td>连接两个或更多的数组，并返回结果。</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">join()</a></td>
+                            <td>把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">pop()</a></td>
+                            <td>删除并返回数组的最后一个元素</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">push()</a></td>
+                            <td>向数组的末尾添加一个或更多元素，并返回新的长度。</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">reverse()</a></td>
+                            <td>颠倒数组中元素的顺序。</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">shift()</a></td>
+                            <td>删除并返回数组的第一个元素</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">slice()</a></td>
+                            <td>从某个已有的数组返回选定的元素</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">sort()</a></td>
+                            <td>对数组的元素进行排序</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">splice()</a></td>
+                            <td>删除元素，并向数组添加新元素。</td>
+                        </tr>
+                        <tr>
+                            <td>toSource()</td>
+                            <td>返回该对象的源代码。</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">toString()</a></td>
+                            <td>把数组转换为字符串，并返回结果。</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">toLocaleString()</a></td>
+                            <td>把数组转换为本地数组，并返回结果。</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">unshift()</a></td>
+                            <td>向数组的开头添加一个或更多元素，并返回新的长度。</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript::void(0);">valueOf()</a></td>
+                            <td>返回数组对象的原始值</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+		 <div class="panel panel-default" data-obj="Boolean">
+    <div class="panel-heading">
+        Boolean 
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:25%">属性</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">constructor</a></td>
+                    <td>返回对创建此对象的 Boolean 函数的引用</td>
+                </tr>
+                <tr>
+                    <td><a>prototype</a></td>
+                    <td>使您有能力向对象添加属性和方法。</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:25%">方法</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>toSource()</td>
+                    <td>返回该对象的源代码。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">toString()</a></td>
+                    <td>把逻辑值转换为字符串，并返回结果。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">valueOf()</a></td>
+                    <td>返回 Boolean 对象的原始值。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+		 <div class="panel panel-default" data-obj="Date">
+    <div class="panel-heading">
+        Date
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:25%">属性</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">constructor</a></td>
+                    <td>返回对创建此对象的 Boolean 函数的引用</td>
+                </tr>
+                <tr>
+                    <td>prototype</td>
+                    <td>使您有能力向对象添加属性和方法。</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:25%">方法</th>
+                    <th>描述</th>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">Date()</a></td>
+                    <td>返回当日的日期和时间。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getDate()</a></td>
+                    <td>从 Date 对象返回一个月中的某一天 (1 ~ 31)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getDay()</a></td>
+                    <td>从 Date 对象返回一周中的某一天 (0 ~ 6)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getMonth()</a></td>
+                    <td>从 Date 对象返回月份 (0 ~ 11)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getFullYear()</a></td>
+                    <td>从 Date 对象以四位数字返回年份。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getYear()</a></td>
+                    <td><span class="deprecated">请使用 getFullYear() 方法代替。</span></td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getHours()</a></td>
+                    <td>返回 Date 对象的小时 (0 ~ 23)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getMinutes()</a></td>
+                    <td>返回 Date 对象的分钟 (0 ~ 59)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getSeconds()</a></td>
+                    <td>返回 Date 对象的秒数 (0 ~ 59)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getMilliseconds()</a></td>
+                    <td>返回 Date 对象的毫秒(0 ~ 999)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getTime()</a></td>
+                    <td>返回 1970 年 1 月 1 日至今的毫秒数。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getTimezoneOffset()</a></td>
+                    <td>返回本地时间与格林威治标准时间 (GMT) 的分钟差。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getUTCDate()</a></td>
+                    <td>根据世界时从 Date 对象返回月中的一天 (1 ~ 31)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getUTCDay()</a></td>
+                    <td>根据世界时从 Date 对象返回周中的一天 (0 ~ 6)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getUTCMonth()</a></td>
+                    <td>根据世界时从 Date 对象返回月份 (0 ~ 11)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getUTCFullYear()</a></td>
+                    <td>根据世界时从 Date 对象返回四位数的年份。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getUTCHours()</a></td>
+                    <td>根据世界时返回 Date 对象的小时 (0 ~ 23)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getUTCMinutes()</a></td>
+                    <td>根据世界时返回 Date 对象的分钟 (0 ~ 59)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getUTCSeconds()</a></td>
+                    <td>根据世界时返回 Date 对象的秒钟 (0 ~ 59)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">getUTCMilliseconds()</a></td>
+                    <td>根据世界时返回 Date 对象的毫秒(0 ~ 999)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">parse()</a></td>
+                    <td>返回1970年1月1日午夜到指定日期（字符串）的毫秒数。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setDate()</a></td>
+                    <td>设置 Date 对象中月的某一天 (1 ~ 31)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setMonth()</a></td>
+                    <td>设置 Date 对象中月份 (0 ~ 11)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setFullYear()</a></td>
+                    <td>设置 Date 对象中的年份（四位数字）。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setYear()</a></td>
+                    <td><span class="deprecated">请使用 setFullYear() 方法代替。</span></td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setHours()</a></td>
+                    <td>设置 Date 对象中的小时 (0 ~ 23)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setMinutes()</a></td>
+                    <td>设置 Date 对象中的分钟 (0 ~ 59)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setSeconds()</a></td>
+                    <td>设置 Date 对象中的秒钟 (0 ~ 59)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setMilliseconds()</a></td>
+                    <td>设置 Date 对象中的毫秒 (0 ~ 999)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setTime()</a></td>
+                    <td>以毫秒设置 Date 对象。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setUTCDate()</a></td>
+                    <td>根据世界时设置 Date 对象中月份的一天 (1 ~ 31)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setUTCMonth()</a></td>
+                    <td>根据世界时设置 Date 对象中的月份 (0 ~ 11)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setUTCFullYear()</a></td>
+                    <td>根据世界时设置 Date 对象中的年份（四位数字）。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setUTCHours()</a></td>
+                    <td>根据世界时设置 Date 对象中的小时 (0 ~ 23)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setUTCMinutes()</a></td>
+                    <td>根据世界时设置 Date 对象中的分钟 (0 ~ 59)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setUTCSeconds()</a></td>
+                    <td>根据世界时设置 Date 对象中的秒钟 (0 ~ 59)。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">setUTCMilliseconds()</a></td>
+                    <td>根据世界时设置 Date 对象中的毫秒 (0 ~ 999)。</td>
+                </tr>
+
+                <tr>
+                    <td>toSource()</td>
+                    <td>返回该对象的源代码。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">toString()</a></td>
+                    <td>把 Date 对象转换为字符串。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">toTimeString()</a></td>
+                    <td>把 Date 对象的时间部分转换为字符串。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">toDateString()</a></td>
+                    <td>把 Date 对象的日期部分转换为字符串。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">toGMTString()</a></td>
+                    <td><span class="deprecated">请使用 toUTCString() 方法代替。</span></td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">toUTCString()</a></td>
+                    <td>根据世界时，把 Date 对象转换为字符串。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">toLocaleString()</a></td>
+                    <td>根据本地时间格式，把 Date 对象转换为字符串。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">toLocaleTimeString()</a></td>
+                    <td>根据本地时间格式，把 Date 对象的时间部分转换为字符串。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">toLocaleDateString()</a></td>
+                    <td>根据本地时间格式，把 Date 对象的日期部分转换为字符串。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">UTC()</a></td>
+                    <td>根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">valueOf()</a></td>
+                    <td>返回 Date 对象的原始值。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+		 <div class="panel panel-default" data-obj="Math">
+    <div class="panel-heading">
+        Math
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:25%">属性</th>
+                    <th>描述</th>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">E</a></td>
+                    <td>返回算术常量 e，即自然对数的底数（约等于2.718）。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">LN2</a></td>
+                    <td>返回 2 的自然对数（约等于0.693）。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">LN10</a></td>
+                    <td>返回 10 的自然对数（约等于2.302）。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">LOG2E</a></td>
+                    <td>返回以 2 为底的 e 的对数（约等于 1.414）。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">LOG10E</a></td>
+                    <td>返回以 10 为底的 e 的对数（约等于0.434）。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">PI</a></td>
+                    <td>返回圆周率（约等于3.14159）。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">SQRT1_2</a></td>
+                    <td>返回返回 2 的平方根的倒数（约等于 0.707）。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">SQRT2</a></td>
+                    <td>返回 2 的平方根（约等于 1.414）。</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:25%">方法</th>
+                    <th>描述</th>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">abs()</a></td>
+                    <td>返回数的绝对值。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">acos()</a></td>
+                    <td>返回数的反余弦值。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">asin()</a></td>
+                    <td>返回数的反正弦值。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">atan()</a></td>
+                    <td>以介于 -PI/2 与 PI/2 弧度之间的数值来返回 x 的反正切值。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">atan2()</a></td>
+                    <td>返回从 x 轴到点 (x,y) 的角度（介于 -PI/2 与 PI/2 弧度之间）。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">ceil()</a></td>
+                    <td>对数进行上舍入。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">cos()</a></td>
+                    <td>返回数的余弦。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">exp()</a></td>
+                    <td>返回 e 的指数。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">floor()</a></td>
+                    <td>对数进行下舍入。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">log()</a></td>
+                    <td>返回数的自然对数（底为e）。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">max()</a></td>
+                    <td>返回 x 和 y 中的最高值。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">min()</a></td>
+                    <td>返回 x 和 y 中的最低值。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">pow()</a></td>
+                    <td>返回 x 的 y 次幂。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">random()</a></td>
+                    <td>返回 0 ~ 1 之间的随机数。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">round()</a></td>
+                    <td>把数四舍五入为最接近的整数。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">sin()</a></td>
+                    <td>返回数的正弦。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">sqrt()</a></td>
+                    <td>返回数的平方根。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">tan()</a></td>
+                    <td>返回角的正切。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">toSource()</a></td>
+                    <td>返回该对象的源代码。</td>
+                </tr>
+
+                <tr>
+                    <td><a href="javascript::void(0);">valueOf()</a></td>
+                    <td>返回 Math 对象的原始值。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+		 <div class="panel panel-default" data-obj="Number">
+    <div class="panel-heading">
+         Number
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:25%">属性</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">constructor</a></td>
+                    <td>返回对创建此对象的 Number 函数的引用。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">MAX_VALUE</a></td>
+                    <td>可表示的最大的数。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">MIN_VALUE</a></td>
+                    <td>可表示的最小的数。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">NaN</a></td>
+                    <td>非数字值。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">NEGATIVE_INFINITY</a></td>
+                    <td>负无穷大，溢出时返回该值。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">POSITIVE_INFINITY</a></td>
+                    <td>正无穷大，溢出时返回该值。</td>
+                </tr>
+                <tr>
+                    <td>prototype</td>
+                    <td>使您有能力向对象添加属性和方法。</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:25%">方法</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">toString</a></td>
+                    <td>把数字转换为字符串，使用指定的基数。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">toLocaleString</a></td>
+                    <td>把数字转换为字符串，使用本地数字格式顺序。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">toFixed</a></td>
+                    <td>把数字转换为字符串，结果的小数点后有指定位数的数字。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">toExponential</a></td>
+                    <td>把对象的值转换为指数计数法。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">toPrecision</a></td>
+                    <td>把数字格式化为指定的长度。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">valueOf</a></td>
+                    <td>返回一个 Number 对象的基本数字值。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> 
+		 <div class="panel panel-default" data-obj="String">
+    <div class="panel-heading">
+        String
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:30%">属性</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>constructor</td>
+                    <td>对创建该对象的函数的引用</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">length</a></td>
+                    <td>字符串的长度</td>
+                </tr>
+                <tr>
+                    <td>prototype</td>
+                    <td>允许您向对象添加属性和方法</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:30%">方法</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">anchor()</a></td>
+                    <td>创建 HTML 锚。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">big()</a></td>
+                    <td>用大号字体显示字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">blink()</a></td>
+                    <td>显示闪动字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">bold()</a></td>
+                    <td>使用粗体显示字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">charAt()</a></td>
+                    <td>返回在指定位置的字符。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">charCodeAt()</a></td>
+                    <td>返回在指定的位置的字符的 Unicode 编码。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">concat()</a></td>
+                    <td>连接字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">fixed()</a></td>
+                    <td>以打字机文本显示字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">fontcolor()</a></td>
+                    <td>使用指定的颜色来显示字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">fontsize()</a></td>
+                    <td>使用指定的尺寸来显示字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">fromCharCode()</a></td>
+                    <td>从字符编码创建一个字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">indexOf()</a></td>
+                    <td>检索字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">italics()</a></td>
+                    <td>使用斜体显示字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">lastIndexOf()</a></td>
+                    <td>从后向前搜索字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">link()</a></td>
+                    <td>将字符串显示为链接。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">localeCompare()</a></td>
+                    <td>用本地特定的顺序来比较两个字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">match()</a></td>
+                    <td>找到一个或多个正则表达式的匹配。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">replace()</a></td>
+                    <td>替换与正则表达式匹配的子串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">search()</a></td>
+                    <td>检索与正则表达式相匹配的值。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">slice()</a></td>
+                    <td>提取字符串的片断，并在新的字符串中返回被提取的部分。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">small()</a></td>
+                    <td>使用小字号来显示字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">split()</a></td>
+                    <td>把字符串分割为字符串数组。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">strike()</a></td>
+                    <td>使用删除线来显示字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">sub()</a></td>
+                    <td>把字符串显示为下标。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">substr()</a></td>
+                    <td>从起始索引号提取字符串中指定数目的字符。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">substring()</a></td>
+                    <td>提取字符串中两个指定的索引号之间的字符。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">sup()</a></td>
+                    <td>把字符串显示为上标。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">toLocaleLowerCase()</a></td>
+                    <td>把字符串转换为小写。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">toLocaleUpperCase()</a></td>
+                    <td>把字符串转换为大写。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">toLowerCase()</a></td>
+                    <td>把字符串转换为小写。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">toUpperCase()</a></td>
+                    <td>把字符串转换为大写。</td>
+                </tr>
+                <tr>
+                    <td>toSource()</td>
+                    <td>代表对象的源代码。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">toString()</a></td>
+                    <td>返回字符串。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">valueOf()</a></td>
+                    <td>返回某个字符串对象的原始值。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> 
+		 <div class="panel panel-default" data-obj="RegExp">
+    <div class="panel-heading">
+        RegExp
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:20%">属性</th>
+                    <th style="width:66%">描述</th>
+                </tr>
+				<tr>
+                    <td><a href="javascript::void(0);">constructor</a></td>
+                    <td>返回对创建此对象的 Boolean 函数的引用</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">global</a></td>
+                    <td>RegExp 对象是否具有标志 g。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">ignoreCase</a></td>
+                    <td>RegExp 对象是否具有标志 i。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">lastIndex</a></td>
+                    <td>一个整数，标示开始下一次匹配的字符位置。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">multiline</a></td>
+                    <td>RegExp 对象是否具有标志 m。</td>
+                </tr>
+                <tr>
+                    <td><a href="javascript::void(0);">source</a></td>
+                    <td>正则表达式的源文本。</td>
+                </tr>
+            </tbody>
+        </table>
+        <table  class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th style="width:20%">方法</th>
+                    <th style="width:66%">描述</th>
+                </tr>
+                <tr>
+                    <td><a  href="javascript::void(0);">compile()</a></td>
+                    <td>编译正则表达式。</td>
+                </tr>
+                <tr>
+                    <td><a  href="javascript::void(0);">exec()</a></td>
+                    <td>检索字符串中指定的值。返回找到的值，并确定其位置。</td>
+                </tr>
+                <tr>
+                    <td><a  href="javascript::void(0);">test()</a></td>
+                    <td>检索字符串中指定的值。返回 true 或 false。</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div> 
+		  
+    </div>
+    <div class="modal fade bs-example-modal-lg" id="detail">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content markdown-body" id="content">
+          ...
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../assert/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../assert/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assert/js/showdown.min.js"></script>
+    <script type="text/javascript" >
+        $(function(){
+            var converter = new showdown.Converter();
+            var res = location.href + '../assert/docs/';
+           $(document).on('click', 'a', function(e){
+                obj = $(this).parents('.panel').data('obj');
+                proto = $(this).text();
+                //全局方法不需要对象
+                if('undefined' == typeof obj){
+                    obj = '';
+                }else{
+                    obj += '.';
+                }
+                $.get(res + obj + proto + '.md', function(data){
+                    html  = converter.makeHtml(data);
+                    $('#content').html(html);
+                    $('#detail').modal('show');
+                })
+                e.preventDefault();
+           })
+
+        })
+         
+    </script>
+</body>
+</html>
